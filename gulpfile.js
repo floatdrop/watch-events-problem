@@ -18,9 +18,10 @@ var watched = [
 ];
 
 gulp.task( "watch", function () {
-  watched.forEach(function ( glob ) {
+  watched.forEach(function ( glob, i ) {
     watch( glob, {
-      verbose: true
+      verbose: true,
+      name: i
     }, function () {
       // noop
     });
